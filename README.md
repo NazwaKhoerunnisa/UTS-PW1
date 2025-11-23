@@ -6,6 +6,8 @@
 
 **TIF RP 23 CNS A**
 
+📌 Project 1 – Website SweetBite Bakery
+
 SweetBite adalah website pemesanan produk bakery sederhana yang dibuat untuk memenuhi UTS Pemrograman Web 1.  
 Website ini menampilkan halaman beranda, daftar produk, detail produk, promo, kontak, login, register, dan halaman pemesanan.
 
@@ -103,3 +105,108 @@ UTS-PW1/
 - Font Google  
 - Responsive Layout
 
+📌 Project 2 – CRUD REST API
+
+API dibuat menggunakan PHP + MySQL, dan diuji menggunakan Bruno.
+
+🔌 Database
+
+Nama database:
+
+uts_pw1_api
+
+
+Tabel:
+
+Field	Type
+id	INT (Primary Key)
+name	VARCHAR
+price	INT
+image	VARCHAR
+⚙ Endpoint API
+1️⃣ GET – Ambil semua produk
+
+Method: GET
+Endpoint:
+
+/api/get_data.php
+
+
+📷 Screenshot:
+
+![get.png](screenshot/get.png)
+
+2️⃣ INSERT – Tambah produk
+
+Method: POST
+Endpoint:
+
+/api/insup_data.php
+
+
+JSON Body:
+
+{
+  "name": "Choco Cake",
+  "price": 45000,
+  "image": "choco.jpg"
+}
+
+
+📷 Screenshot:
+
+![insert.png](screenshot/insert.png)
+
+3️⃣ UPDATE – Update produk
+
+Method: POST
+Endpoint:
+
+/api/insup_data.php
+
+
+JSON Body:
+
+{
+  "id": 1,
+  "name": "Choco Cake Premium",
+  "price": 55000,
+  "image": "choco_new.jpg"
+}
+
+
+📷 Screenshot:
+
+![update.png](screenshot/update.png)
+
+
+4️⃣ DELETE – Hapus produk
+
+Method: POST
+Endpoint:
+
+/api/delete_data.php
+
+
+JSON Body:
+
+{
+  "id": 1
+}
+
+
+📷 Screenshot:
+
+![delete.png](screenshot/delete.png)
+
+🛠 Tools yang Digunakan
+
+Laragon (Apache + MySQL + PHP)
+
+Bruno (API Testing)
+
+Bootstrap 5
+
+VS Code
+
+Git & GitHub

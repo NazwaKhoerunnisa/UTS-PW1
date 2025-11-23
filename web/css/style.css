@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Quicksand:wght@400;600&display=swap');
+
+:root{
+  --brown:#4b2e1e;
+  --cream:#f8e5d1;
+  --bg:#fdf6f0;
+  --card:#fff6f1;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:'Quicksand',sans-serif;
+  background:var(--bg);
+  color:#3c2a21;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+
+/* NAVBAR */
+.navbar{
+  background: var(--brown);
+}
+.navbar .container {
+  display:flex;
+  align-items:center;
+}
+.navbar .navbar-brand {
+  color: var(--cream) !important;
+  font-weight: 700;
+  font-size: 1.2rem;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.navbar .navbar-brand{
+  color: var(--cream) !important;
+  font-weight: 600;
+}
+
+.navbar .navbar-brand img{
+  height:40px;
+  width:40px;
+  object-fit:cover;
+  border-radius:50%;
+  border:2px solid rgba(216, 190, 190, 0.908);
+}
+
+.navbar .nav-link{
+  color: var(--cream) !important;
+  margin-left: 18px;
+  font-weight: 600;
+  padding-left:0;
+  padding-right:0;
+}
+.navbar .nav-link:hover{
+  color:#ffe5b4 !important;
+  text-decoration: underline;
+}
+
+/* HERO */
+.hero{
+  background: linear-gradient(rgba(75,46,30,0.55), rgba(75,46,30,0.55)),
+              url('img/hero.jpg') center/cover no-repeat;
+  color:#fff;
+  padding:110px 0;
+  text-align:center;
+}
+.hero h1{
+  font-family:'Playfair Display', serif;
+  font-size:3rem;
+  margin:0;
+}
+.hero p.lead{ opacity:0.95; margin:.75rem 0 1.2rem; }
+.hero-logo{ display:none; }
+
+/* MAIN */
+.container.main{ padding:36px 20px 60px; flex:1 0 auto; }
+
+/* ABOUT LAYOUT */
+.about-row{
+  display:flex;
+  gap:30px;
+  align-items:center;
+  margin-bottom:28px;
+  flex-wrap:wrap;
+}
+.about-left{
+  flex:1;
+  max-width:45%;
+}
+.about-right{
+  flex:1;
+  max-width:55%;
+}
+.about-right h3{
+  font-family:'Playfair Display',serif;
+  margin-bottom:12px;
+}
+
+/* ABOUT IMAGE RESPONSIVE FIX */
+.about-left img{
+  width:100%;
+  height:auto;
+  max-height:300px;
+  object-fit:cover;
+  border-radius:12px;
+  display:block;
+}
+
+/* CARD GRID */
+.card{
+  background:var(--card);
+  border-radius:12px;
+  border:0;
+  box-shadow:0 8px 20px rgba(0,0,0,0.06);
+  overflow:hidden;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+}
+.card-img-top{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  display:block;
+}
+.card-body{
+  flex:1 1 auto;
+  padding:16px;
+}
+
+/* BUTTONS */
+.btn-sweet{
+  background:var(--brown);
+  color:var(--cream);
+  border:0;
+}
+.btn-sweet:hover{
+  background:#2e1a13;
+  color:#fff;
+}
+
+/* FORM */
+.form-section{
+  background:#fff;
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.05);
+}
+
+/* PRODUCT DETAIL IMAGE */
+.detail-img{
+  width:100%;
+  height:380px;
+  object-fit:cover;
+  border-radius:8px;
+}
+
+/* MENU CARD IMG */
+.menu-card-img{
+  width:64px;
+  height:64px;
+  object-fit:cover;
+  border-radius:8px;
+}
+
+/* FOOTER */
+footer{
+  background:var(--brown);
+  color:var(--cream);
+  padding:16px 10px;
+  text-align:center;
+  margin-top:40px;
+}
+
+/* BACK BUTTON */
+.btn-back { margin-bottom:16px; }
+
+/* RESPONSIVE */
+@media (max-width:991px){
+  .about-left,
+  .about-right{
+    max-width:100%;
+    flex-basis:100%;
+  }
+
+  .about-left img{
+    max-height:230px;
+  }
+
+  .card-img-top{
+    height:220px;
+  }
+
+  .detail-img{
+    height:240px;
+  }
+
+  .hero{
+    padding:70px 20px;
+  }
+}
+/* ===== ABOUT GRID LAYOUT ===== */
+.about-row {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 24px;
+  align-items: start;
+  margin-bottom: 32px;
+}
+
+/* Batas ukuran gambar */
+.about-left img {
+  width: 100%;
+  max-height: 240px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+/* Mobile responsif - otomatis susun kebawah */
+@media (max-width: 991px) {
+  .about-row {
+    grid-template-columns: 1fr;
+  }
+
+  .about-left img {
+    max-height: 200px;
+  }
+}

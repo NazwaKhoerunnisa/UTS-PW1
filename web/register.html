@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Register - SweetBite</title>
+
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"> SweetBite</a>
+  </div>
+</nav>
+
+<main class="container main" style="max-width:520px;">
+  <button class="btn btn-outline-secondary btn-back" onclick="history.back()">← Kembali</button>
+  <h3 class="text-center mb-4">Registrasi Akun</h3>
+
+  <form id="formReg">
+    <label>Nama Lengkap</label>
+    <input id="nama" class="form-control mb-3" required>
+
+    <label>Email</label>
+    <input id="email" type="email" class="form-control mb-3" required>
+
+    <label>Username</label>
+    <input id="user" class="form-control mb-3" required>
+
+    <label>Password</label>
+    <input id="pass" type="password" class="form-control mb-3" required>
+
+    <button class="btn btn-sweet w-100">Daftar</button>
+    <p class="text-center mt-3">Sudah punya akun? <a href="login.html">Login</a></p>
+  </form>
+</main>
+
+<footer>@Copyright by 23552011093_Nazwa Khoerunnisa_TIF RP 23 CNS A</footer>
+
+<script>
+document.getElementById('formReg').addEventListener('submit', function(e){
+  e.preventDefault();
+  const nama = document.getElementById('nama').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const user = document.getElementById('user').value.trim();
+  const pass = document.getElementById('pass').value.trim();
+
+  if(!nama || !email || !user || !pass){
+    alert('Semua field wajib diisi!');
+    return;
+  }
+
+  localStorage.setItem('user', user);
+  localStorage.setItem('pass', pass);
+  localStorage.setItem('name', nama);
+  localStorage.setItem('email', email);
+  alert('Registrasi berhasil! Silakan login.');
+  window.location.href = 'login.html';
+});
+</script>
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

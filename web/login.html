@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login - SweetBite</title>
+
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"> SweetBite</a>
+  </div>
+</nav>
+
+<main class="container main" style="max-width:520px;">
+  <button class="btn btn-outline-secondary btn-back" onclick="history.back()">← Kembali</button>
+  <h3 class="text-center mb-4">Login</h3>
+
+  <form id="formLogin">
+    <label>Username</label>
+    <input id="user" class="form-control mb-3" required>
+    <label>Password</label>
+    <input id="pass" type="password" class="form-control mb-3" required>
+
+    <div id="err" style="color:#b00020; margin-bottom:10px; display:none;"></div>
+
+    <button class="btn btn-sweet w-100">Login</button>
+    <p class="text-center mt-3">Belum punya akun? <a href="register.html">Daftar</a></p>
+  </form>
+</main>
+
+<footer>@Copyright by 23552011093_Nazwa Khoerunnisa_TIF RP 23 CNS A</footer>
+
+<script>
+document.getElementById('formLogin').addEventListener('submit', function(e){
+  e.preventDefault();
+  const u = document.getElementById('user').value.trim();
+  const p = document.getElementById('pass').value.trim();
+
+  const storedU = localStorage.getItem('user');
+  const storedP = localStorage.getItem('pass');
+
+  if( (storedU && storedP && u===storedU && p===storedP) || (u==='admin' && p==='123') ){
+    window.location.href = 'menu.html';
+  } else {
+    const err = document.getElementById('err');
+    err.style.display = 'block';
+    err.textContent = 'Username atau password salah!';
+  }
+});
+</script>
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

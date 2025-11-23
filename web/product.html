@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Produk - SweetBite</title>
+
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"> SweetBite</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="product.html">Produk</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container main">
+  <button class="btn btn-outline-secondary btn-back" onclick="history.back()">← Kembali</button>
+  <h2 style="font-family:'Playfair Display';" class="mb-4">Semua Produk</h2>
+
+  <div class="row">
+    <!-- reuse the 6 products (only Detail button) -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100">
+        <img class="card-img-top" src="img/choco.jpg" alt="Choco">
+        <div class="card-body">
+          <h5>Choco Fudge Cake</h5>
+          <p class="fw-bold">Rp 45.000</p>
+          <div class="d-grid gap-2">
+            <a href="detail.html?id=choco" class="btn btn-outline-secondary">Detail</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card h-100">
+        <img class="card-img-top" src="img/vanilla.jpg" alt="Vanilla">
+        <div class="card-body">
+          <h5>Vanilla Sprinkle Cupcake</h5>
+          <p class="fw-bold">Rp 20.000</p>
+          <div class="d-grid gap-2">
+            <a href="detail.html?id=vanilla" class="btn btn-outline-secondary">Detail</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card h-100">
+        <img class="card-img-top" src="img/cheese.jpg" alt="Cheese">
+        <div class="card-body">
+          <h5>Soft Cheesecake</h5>
+          <p class="fw-bold">Rp 40.000</p>
+          <div class="d-grid gap-2">
+            <a href="detail.html?id=cheese" class="btn btn-outline-secondary">Detail</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card h-100">
+        <img class="card-img-top" src="img/redvelvet.jpg" alt="Red Velvet">
+        <div class="card-body">
+          <h5>Red Velvet Cake</h5>
+          <p class="fw-bold">Rp 50.000</p>
+          <div class="d-grid gap-2">
+            <a href="detail.html?id=redvelvet" class="btn btn-outline-secondary">Detail</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card h-100">
+        <img class="card-img-top" src="img/matcha.jpg" alt="Matcha">
+        <div class="card-body">
+          <h5>Matcha Cream Roll</h5>
+          <p class="fw-bold">Rp 35.000</p>
+          <div class="d-grid gap-2">
+            <a href="detail.html?id=matcha" class="btn btn-outline-secondary">Detail</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card h-100">
+        <img class="card-img-top" src="img/strawberry.jpg" alt="Strawberry">
+        <div class="card-body">
+          <h5>Strawberry Shortcake</h5>
+          <p class="fw-bold">Rp 42.000</p>
+          <div class="d-grid gap-2">
+            <a href="detail.html?id=strawberry" class="btn btn-outline-secondary">Detail</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer>@Copyright by 23552011093_Nazwa Khoerunnisa_TIF RP 23 CNS A</footer>
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SweetBite Bakery - Home</title>
+
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="img/logo.png" alt="logo"> SweetBite
+    </a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu"><span class="navbar-toggler-icon"></span></button>
+
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="product.html">Produk</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO (no logo) -->
+<section class="hero">
+  <div class="container text-center">
+    <h1>Fresh Homemade Cakes</h1>
+    <p class="lead">Rasakan kelembutan kue premium buatan tangan — resep turun-temurun keluarga kami.</p>
+    <a class="btn btn-sweet" href="product.html">Lihat Menu</a>
+  </div>
+</section>
+
+<main class="container main">
+  <!-- About with image on left (image smaller) -->
+  <div class="about-row">
+    <div class="about-left">
+      <img src="img/about.jpg" alt="Toko SweetBite">
+    </div>
+    <div class="about-right">
+      <h3>About Us</h3>
+      <p><strong>Didirikan sejak 1998.</strong> SweetBite Bakery lahir dari resep keluarga yang diwariskan secara turun-temurun. Kami hanya menggunakan bahan premium — butter asli, cokelat Belgia, vanilla Madagascar — untuk menciptakan kue yang lembut dan kaya rasa.</p>
+      <p>Kami percaya setiap gigitan harus meninggalkan kenangan manis. Seluruh proses pembuatan dilakukan dengan teliti dan penuh cinta oleh tim kami.</p>
+    </div>
+  </div>
+
+  <!-- Produk preview (6 items) -->
+  <h2 class="text-center mb-4" style="font-family:'Playfair Display';">Kue Favorit Kami</h2>
+
+  <div class="row">
+    <!-- PRODUCT 1 -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100">
+        <img class="card-img-top" src="img/choco.jpg" alt="Choco Fudge">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Choco Fudge Cake</h5>
+          <p class="card-text fw-bold">Rp 45.000</p>
+          <p class="small text-muted">Kue coklat premium dengan lapisan ganache.</p>
+          <div class="mt-auto d-grid gap-2">
+            <a href="detail.html?id=choco" class="btn btn-outline-secondary">Lihat Detail</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUCT 2 -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100">
+        <img class="card-img-top" src="img/vanilla.jpg" alt="Vanilla">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Vanilla Sprinkle Cupcake</h5>
+          <p class="card-text fw-bold">Rp 20.000</p>
+          <p class="small text-muted">Cupcake lembut dengan frosting vanilla.</p>
+          <div class="mt-auto d-grid gap-2">
+            <a href="detail.html?id=vanilla" class="btn btn-outline-secondary">Lihat Detail</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUCT 3 -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100">
+        <img class="card-img-top" src="img/cheese.jpg" alt="Cheesecake">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Soft Cheesecake</h5>
+          <p class="card-text fw-bold">Rp 40.000</p>
+          <p class="small text-muted">Cheesecake creamy lembut dengan crust renyah.</p>
+          <div class="mt-auto d-grid gap-2">
+            <a href="detail.html?id=cheese" class="btn btn-outline-secondary">Lihat Detail</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUCT 4 -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100">
+        <img class="card-img-top" src="img/redvelvet.jpg" alt="Red Velvet">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Red Velvet Cake</h5>
+          <p class="card-text fw-bold">Rp 50.000</p>
+          <p class="small text-muted">Red velvet lembut dengan cream cheese frosting.</p>
+          <div class="mt-auto d-grid gap-2">
+            <a href="detail.html?id=redvelvet" class="btn btn-outline-secondary">Lihat Detail</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUCT 5 -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100">
+        <img class="card-img-top" src="img/matcha.jpg" alt="Matcha">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Matcha Cream Roll</h5>
+          <p class="card-text fw-bold">Rp 35.000</p>
+          <p class="small text-muted">Roll sponge lembut dengan krim matcha.</p>
+          <div class="mt-auto d-grid gap-2">
+            <a href="detail.html?id=matcha" class="btn btn-outline-secondary">Lihat Detail</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUCT 6 -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100">
+        <img class="card-img-top" src="img/strawberry.jpg" alt="Strawberry">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">Strawberry Shortcake</h5>
+          <p class="card-text fw-bold">Rp 42.000</p>
+          <p class="small text-muted">Cake lembut lapis strawberry segar.</p>
+          <div class="mt-auto d-grid gap-2">
+            <a href="detail.html?id=strawberry" class="btn btn-outline-secondary">Lihat Detail</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer>@Copyright by 23552011093_Nazwa Khoerunnisa_TIF RP 23 CNS A</footer>
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

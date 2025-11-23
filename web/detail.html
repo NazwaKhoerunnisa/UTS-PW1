@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Detail Produk - SweetBite</title>
+
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"> SweetBite</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="menu"><ul class="navbar-nav ms-auto"><li class="nav-item"><a class="nav-link" href="index.html">Home</a></li><li class="nav-item"><a class="nav-link" href="product.html">Produk</a></li><li class="nav-item"><a class="nav-link" href="login.html">Login</a></li></ul></div>
+  </div>
+</nav>
+
+<main class="container main">
+  <button class="btn btn-outline-secondary btn-back" onclick="history.back()">← Kembali</button>
+  <div id="detailContent"></div>
+</main>
+
+<footer>@Copyright by 23552011093_Nazwa Khoerunnisa_TIF RP 23 CNS A</footer>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const id = params.get('id') || 'choco';
+
+const items = {
+  choco:{
+    title:'Choco Fudge Cake',
+    img:'img/choco.jpg',
+    price:'Rp 45.000',
+    desc:`Choco Fudge Cake kami dibuat dengan bahan berkualitas: tepung pilihan, cokelat Belgia, dan butter premium. Tekstur moist, dilapisi ganache yang kaya rasa dan dihiasi potongan cokelat. Cocok untuk acara ulang tahun maupun hadiah spesial. Disajikan segar setiap hari, dibuat dengan perhatian terhadap detail oleh pembuat kue profesional, dan cocok untuk mereka yang menghargai cita rasa cokelat otentik.`
+  },
+  vanilla:{
+    title:'Vanilla Sprinkle Cupcake',
+    img:'img/vanilla.jpg',
+    price:'Rp 20.000',
+    desc:`Cupcake lembut dengan frosting vanilla buatan tangan dan taburan sprinkle. Menggunakan ekstrak vanilla natural untuk aroma autentik serta butter berkualitas sehingga tekstur tetap moist. Ideal untuk acara kecil dan pesta anak-anak.`
+  },
+  cheese:{
+    title:'Soft Cheesecake',
+    img:'img/cheese.jpg',
+    price:'Rp 40.000',
+    desc:`Cheesecake premium dengan tekstur halus dan rasa keju yang kaya. Menggunakan cream cheese berkualitas, sedikit gula untuk menonjolkan keaslian rasa, dan crust renyah dari biskuit premium. Cocok dinikmati bersama teh atau kopi.`
+  },
+  redvelvet:{
+    title:'Red Velvet Cake',
+    img:'img/redvelvet.jpg',
+    price:'Rp 50.000',
+    desc:`Red Velvet moist dengan warna yang cantik dan cream cheese frosting yang creamy. Dihasilkan dari campuran bahan berkualitas dan dipanggang sempurna untuk tekstur lembut.`
+  },
+  matcha:{
+    title:'Matcha Cream Roll',
+    img:'img/matcha.jpg',
+    price:'Rp 35.000',
+    desc:`Roll sponge dengan krim matcha lembut, memakai matcha premium sehingga aroma dan rasa teh hijau terasa seimbang dengan manisnya krim. Cocok untuk pencinta matcha.`
+  },
+  strawberry:{
+    title:'Strawberry Shortcake',
+    img:'img/strawberry.jpg',
+    price:'Rp 42.000',
+    desc:`Shortcake dengan lapisan strawberry segar, whipped cream, dan sponge lembut. Setiap lapisan dibuat untuk menonjolkan kombinasi rasa buah segar dan tekstur lembut.`
+  }
+};
+
+const p = items[id] || items['choco'];
+document.getElementById('detailContent').innerHTML = `
+  <div class="row g-4">
+    <div class="col-md-6"><img src="${p.img}" class="detail-img" alt="${p.title}"></div>
+    <div class="col-md-6">
+      <h2>${p.title}</h2>
+      <p class="fw-bold">${p.price}</p>
+      <p>${p.desc}</p>
+      <div class="d-grid gap-2">
+        <a href="pesan.html" class="btn btn-sweet">Pesan Sekarang</a>
+      </div>
+    </div>
+  </div>
+`;
+</script>
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
